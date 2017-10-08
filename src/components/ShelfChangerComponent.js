@@ -6,7 +6,7 @@ class ShelfChanger extends Component {
   constructor(props){
     super(props);
     this.state = {
-      selectedOption: this.props.shelf
+      selectedOption: this.props.categoryToShow
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +25,7 @@ class ShelfChanger extends Component {
  }
 
   render(){
-    let { selectedOption } = this.state.selectedOption;
+    let { selectedOption } = this.state;
 
     return (
       <div className="book-shelf-changer">
