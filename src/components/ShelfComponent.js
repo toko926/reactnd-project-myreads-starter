@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Book } from './BookComponent';
+import Book from './BookComponent';
 
 class Shelf extends Component {
 

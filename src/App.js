@@ -9,15 +9,15 @@ class App extends React.Component {
     showSearchPage: false
   }
 
-  ComponentDidMount(){
-    BooksAPI.getAll.then((books) => {
+  componentDidMount(){
+    BooksAPI.getAll().then((books) => {
       this.setState({ books })
     })
   }
 
   render() {
     let { books } = this.state;
-    // console.log(Allbooks);
+    console.log(books);
     return (
       <div className="app">
         {this.state.showSearchPage ? (
@@ -34,8 +34,8 @@ class App extends React.Component {
           </div>
         ) : (
           <div className="list-books">
+            <h1>MyReads</h1>
             <div className="list-books-title">
-              <h1>MyReads</h1>
                 <Shelf shelf='currentlyReading' AllBooks={books}/>
                 <Shelf shelf='wantToRead' AllBooks={books}/>
                 <Shelf shelf='read' AllBooks={books}/>
